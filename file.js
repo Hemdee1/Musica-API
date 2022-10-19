@@ -146,35 +146,35 @@ const popular = [
 
 const YBNLPlaylist = [
   {
-    id: "new-8",
+    id: "ybnl-1",
     artist: "Olamide",
     title: "We Outside",
     cover: "https://musica-api.up.railway.app/cover/cover_8.jpeg",
     audio: "https://musica-api.up.railway.app/audio/audio_8.mp3",
   },
   {
-    id: "popular-9",
+    id: "ybnl-2",
     artist: "Asake",
     title: "PBUY",
     cover: "https://musica-api.up.railway.app/cover/cover_19.png",
     audio: "https://musica-api.up.railway.app/audio/audio_19.mp3",
   },
   {
-    id: "popular-6",
+    id: "ybnl-3",
     artist: "Asake ft Burna Boy",
     title: "Sungba Remix",
     cover: "https://musica-api.up.railway.app/cover/cover_16.jpeg",
     audio: "https://musica-api.up.railway.app/audio/audio_16.mp3",
   },
   {
-    id: "popular-7",
+    id: "ybnl-4",
     artist: "Fireboy",
     title: "Playboy",
     cover: "https://musica-api.up.railway.app/cover/cover_17.jpeg",
     audio: "https://musica-api.up.railway.app/audio/audio_17.mp3",
   },
   {
-    id: "popular-1",
+    id: "ybnl-5",
     artist: "Asake",
     title: "Terminator",
     cover: "https://musica-api.up.railway.app/cover/cover_11.jpeg",
@@ -184,14 +184,14 @@ const YBNLPlaylist = [
 
 const zinoleeskyPlaylist = [
   {
-    id: "new-10",
+    id: "zino-1",
     artist: "Zinoleesky",
     title: "Call Of Duty",
     cover: "https://musica-api.up.railway.app/cover/cover_10.jpg",
     audio: "https://musica-api.up.railway.app/audio/audio_10.mp3",
   },
   {
-    id: "popular-10",
+    id: "zino-2",
     artist: "Zinoleesky",
     title: "Loving You",
     cover: "https://musica-api.up.railway.app/cover/cover_20.jpg",
@@ -201,21 +201,21 @@ const zinoleeskyPlaylist = [
 
 const asakePlaylist = [
   {
-    id: "popular-9",
+    id: "asake-1",
     artist: "Asake",
     title: "PBUY",
     cover: "https://musica-api.up.railway.app/cover/cover_19.png",
     audio: "https://musica-api.up.railway.app/audio/audio_19.mp3",
   },
   {
-    id: "popular-6",
+    id: "asake-2",
     artist: "Asake ft Burna Boy",
     title: "Sungba Remix",
     cover: "https://musica-api.up.railway.app/cover/cover_16.jpeg",
     audio: "https://musica-api.up.railway.app/audio/audio_16.mp3",
   },
   {
-    id: "popular-1",
+    id: "asake-3",
     artist: "Asake",
     title: "Terminator",
     cover: "https://musica-api.up.railway.app/cover/cover_11.jpeg",
@@ -225,14 +225,14 @@ const asakePlaylist = [
 
 const AyraStarrPlaylist = [
   {
-    id: "new-2",
+    id: "ayra-1",
     artist: "Ayra Starr",
     title: "Rush",
     cover: "https://musica-api.up.railway.app/cover/cover_2.png",
     audio: "https://musica-api.up.railway.app/audio/audio_2.mp3",
   },
   {
-    id: "popular-2",
+    id: "ayra-2",
     artist: "Magix ft Ayra Starr",
     title: "Love Don't Cost A Dime",
     cover: "https://musica-api.up.railway.app/cover/cover_12.jpeg",
