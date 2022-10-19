@@ -242,21 +242,25 @@ const AyraStarrPlaylist = [
 
 const playlists = [
   {
+    id: "playlist-1",
     title: "YBNL Playlist",
     cover: "https://musica-api.up.railway.app/cover/play_cover_1.jpg",
     files: YBNLPlaylist,
   },
   {
+    id: "playlist-2",
     title: "Asake Playlist",
     cover: "https://musica-api.up.railway.app/cover/play_cover_2.png",
     files: asakePlaylist,
   },
   {
+    id: "playlist-3",
     title: "Zinoleesky Playlist",
     cover: "https://musica-api.up.railway.app/cover/play_cover_3.jpg",
     files: zinoleeskyPlaylist,
   },
   {
+    id: "playlist-4",
     title: "Ayra Starr Playlist",
     cover: "https://musica-api.up.railway.app/cover/play_cover_4.jpg",
     files: AyraStarrPlaylist,
