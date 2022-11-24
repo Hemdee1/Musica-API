@@ -3,8 +3,7 @@ const cors = require("cors");
 
 require("dotenv").config();
 
-// const { newRelease, popular, playlists } = require("./file");
-const { newRelease, popular, playlists } = require("./offlineFile");
+const { newRelease, popular, playlists } = require("./file");
 
 const app = express();
 
