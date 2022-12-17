@@ -1,3 +1,167 @@
+const books = [
+  {
+    userId: 1,
+    id: 1,
+    title: "How to be Rich!!",
+    summary: "This wonderful book Talks about what is the main essense of making bread because bread yeahh is very good your health.",
+    price: 200,
+  },
+  {
+    userId: 3,
+    id: 3,
+    title: "Binance Futures Test",
+    summary: "Learn how to use binance futures platform and how to trade and make profits daily. et a 30% refun on first 30 days.",
+    price: 100
+  },
+  {
+    userId: 2,
+    id: 4,
+    title: "Binance Trading ",
+    summary: "Learn how to use binance futures platform and how to trade and make profits daily. at a 30% refund on first 30 days.",
+    price: 100
+  },
+  {
+    id: 16,
+    userId: 4,
+    title: "A tale of 2 Goats",
+    summary: "A tale of 2 goats, A tale of style and pizzaz of 2 men. One skilled in the art of Goal scoring, the other skilled in the art of Playing Football. There is only One Goat. A tale of 2 Goats.",
+    price: 200
+  },
+  {
+    id: 10,
+    userId: 4,
+    title: "Jack Grealish",
+    summary: "A day in a life let's see if you really trao, turn off the autotunes let's here you really rao. hahah send a location, i'm speeding 20 bags on aj's",
+    price: 20
+  },
+  {
+    id: "gQtAOwdIMdCPzWa4uhrG-",
+    userId: 2,
+    title: "A Tale of Will Smith",
+    summary: "keep my wife's name out yo *Beep* MOUTH!!!",
+    price: 3000
+  },
+  {
+    id: "-M6ym7G9bOQwMCqcER4an",
+    userId: 1,
+    title: "YES MAN",
+    summary: "OK lets talk about the difference between a red orange and a blue tank top.",
+    price: 200
+  },
+  {
+    id: "NVV1plhKLl2Gws1odkM86",
+    userId: 1,
+    title: "Lorem ipsum",
+    summary: "lorem ipsum dolor init muil maximilla madibulla ipsum lorem dolor",
+    price: 2000
+  },
+  {
+    id: "BUodPoaOvSTnLJhyS2Fw7",
+    userId: 3,
+    title: "My First Publish",
+    summary: "This Book Talks about what are the benefit and what are the non-benefits of being a boy. It looks at the different perspective of manhood and boyhood.",
+    price: 15
+  },
+];
+
+
+const author = [
+  {
+    id: 1,
+    name: "Jack Daniels",
+    username: "Jack",
+    email: "Sincere@april.biz",
+    address: {
+      street: "Kulas Light",
+      suite: "Apt. 556",
+      city: "Gwenborough",
+      zipcode: "92998-3874",
+      geo: {
+        lat: "-37.3159",
+        lng: "81.1496"
+      }
+    },
+    phone: "1-770-736-8031 x56442",
+    website: "hildegard.org",
+    company: {
+      name: "Romaguera-Crona",
+      catchPhrase: "Multi-layered client-server neural-net",
+      bs: "harness real-time e-markets"
+    }
+  },
+  {
+    id: 2,
+    name: "Ervin Howell",
+    username: "Antonette",
+    email: "Shanna@melissa.tv",
+    address: {
+      street: "Victor Plains",
+      suite: "Suite 879",
+      city: "Wisokyburgh",
+      zipcode: "90566-7771",
+      geo: {
+        lat: "-43.9509",
+        lng: "-34.4618"
+      }
+    },
+    phone: "010-692-6593 x09125",
+    website: "anastasia.net",
+    company: {
+      name: "Deckow-Crist",
+      catchPhrase: "Proactive didactic contingency",
+      bs: "synergize scalable supply-chains"
+    }
+  },
+  {
+    id: 3,
+    name: "Clementine Bauch",
+    username: "Samantha",
+    email: "Nathan@yesenia.net",
+    address: {
+      street: "Douglas Extension",
+      suite: "Suite 847",
+      city: "McKenziehaven",
+      zipcode: "59590-4157",
+      geo: {
+        lat: "-68.6102",
+        lng: "-47.0653"
+      }
+    },
+    phone: "1-463-123-4447",
+    website: "ramiro.info",
+    company: {
+      name: "Romaguera-Jacobson",
+      catchPhrase: "Face to face bifurcated interface",
+      bs: "e-enable strategic applications"
+    }
+  },
+  {
+    id: 4,
+    name: "Patricia Lebsack",
+    username: "Karianne",
+    email: "Julianne.OConner@kory.org",
+    address: {
+      street: "Hoeger Mall",
+      suite: "Apt. 692",
+      city: "South Elvis",
+      zipcode: "53919-4257",
+      geo: {
+        lat: "29.4572",
+        lng: "-164.2990"
+      }
+    },
+    phone: "493-170-9623 x156",
+    website: "kale.biz",
+    company: {
+      name: "Robel-Corkery",
+      catchPhrase: "Multi-tiered zero tolerance productivity",
+      bs: "transition cutting-edge web services"
+    }
+  }
+]
+
+
+/* 
 const newRelease = [
   {
     id: "new-1",
@@ -357,7 +521,10 @@ const playlists = [
     files: bujuPlaylist,
   },
 ];
+*/
 
 // https://musica-api.up.railway.app
 
-module.exports = { newRelease, popular, playlists };
+// module.exports = { newRelease, popular, playlists };
+
+module.exports = {books, author}

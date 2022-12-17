@@ -3,30 +3,26 @@ const cors = require("cors");
 
 require("dotenv").config();
 
-const { newRelease, popular, playlists } = require("./file");
+const { books, author } = require("./file");
 
 const app = express();
 
 app.use(cors());
-app.use("/audio", express.static("audio"));
-app.use("/cover", express.static("cover"));
+// app.use("/audio", express.static("audio"));
+// app.use("/cover", express.static("cover"));
 
 app.get("/", (req, res) => {
   res.json({
-    msg: "There is no data on this route, try /new, /popular or /playlist",
+    msg: "There is no data on this route, try /books or /author",
   });
 });
 
-app.get("/new", (req, res) => {
-  res.json(newRelease);
+app.get("/books", (req, res) => {
+  res.json(books);
 });
 
-app.get("/popular", (req, res) => {
-  res.json(popular);
-});
-
-app.get("/playlist", (req, res) => {
-  res.json(playlists);
+app.get("/author", (req, res) => {
+  res.json(author);
 });
 
 app.listen(process.env.PORT || 3000, () => {
