@@ -3,77 +3,57 @@ const cors = require("cors");
 
 require("dotenv").config();
 
-// const { author } = require("./file");
+const { author } = require("./file");
 const bodyParser = require('body-parser');
 const app = express();
-//Here we are configuring express to use body-parser as    middle-ware.
+
+let books = [{
+  userId: 1,
+  id: 1,
+  title: "How to be Rich!!",
+  summary: "This book talks about what is the main essense of making bread because bread yeahh is very good your health. (CAN'T BE DELETED/EDITED!)",
+  price: 200,
+},
+{
+  userId: 3,
+  id: 3,
+  title: "Binance Futures Test",
+  summary: "Learn how to use binance futures platform and how to trade and make profits daily. at a 30% refund on first 30 days. (CAN'T BE DELETED/EDITED!)",
+  price: 100
+},
+{
+  userId: 2,
+  id: 4,
+  title: "Binance Trading ",
+  summary: "Learn how to use binance futures platform and how to trade and make profits daily. at a 30% refund on first 30 days. (CAN'T BE DELETED/EDITED!)",
+  price: 100
+},
+{
+  id: 16,
+  userId: 4,
+  title: "A tale of 2 Goats",
+  summary: "A tale of 2 goats, A tale of style and pizzaz of 2 men. One skilled in the art of Goal scoring, the other skilled in the art of Playing Football. There is only One Goat. A tale of 2 Goats. (CAN'T BE DELETED/EDITED!)",
+  price: 200
+},
+{
+  id: 10,
+  userId: 4,
+  title: "A day in a life",
+  summary: "A day in a life let's see if you really trap, turn off the autotunes let's here you really rap. haha send a location, i'm speeding 20 bags on aj's (CAN'T BE DELETED/EDITED!)",
+  price: 20
+},
+{
+  id: 2,
+  userId: 2,
+  title: "A Tale of Will Smith",
+  summary: "keep my wife's name out yo *Beep* MOUTH!!! (CAN'T BE DELETED/EDITED!)",
+  price: 3000
+},
+]
+
+//Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-const Data = {
-  Students: [
-    {
-      id: 1,
-      name: 'jack sparrow',
-      age: 19,
-      email: 'jack@gmail.com',
-      level: 100,
-      department: 'computer science',
-      courses: ['csc101', 'bio101', 'chm102', 'ges104', 'ams101'],
-      password: 'attp102'
-    },
-    {
-      id: 2,
-      name: 'mike angelo',
-      age: 19,
-      email: 'mike@gmail.com',
-      level: 300,
-      department: 'info Tech',
-      courses: ['itp301', 'bio301', 'mee301', 'ges301', 'ams301'],
-      password: 'kpoi189'
-    },
-  ],
-  Levels: [
-    {
-      id: 100,
-      level: 100,
-      Students: [{id: 1, name: 'jack sparrow', department: 'comuter science'}, {id: 2, name: 'mike angelo', department: 'comuter science'}],
-      available_course: ['ams 101', 'csc101', 'bgt101', 'acc102', 'ges102', 'phy101', 'bio101', 'mee101']
-    },
-    {
-      id: 200,
-      level: 200,
-      Students: [],
-      available_course: ['ams 201', 'csc201', 'bgt201', 'acc202', 'ges202', 'phy201', 'bio101', 'mee201']
-    },
-    {
-      id: 300,
-      level: 300,
-      Students: [],
-      available_course: ['ams 301', 'csc301', 'bgt311', 'acc312', 'ges301', 'itp301', 'bio301', 'mee301']
-    },
-    {
-      id: 400,
-      level: 400,
-      Students: [],
-      available_course: ['csc 407', 'csc411', 'bgt401', 'acc402', 'ges402', 'phy401', 'bio401', 'itp411']
-    },
-    {
-      id: 500,
-      level: 500,
-      Students: [],
-      available_course: ['csc 507', 'csc511', 'bgt501', 'acc502', 'ges502', 'phy501', 'bio501', 'itp511']
-    }
-  ]
-}
-
-// let Students = [
-
-// ]
-
-// let Levels = [
-
-// ]
 
 app.use(cors());
 // app.use("/audio", express.static("audio"));
@@ -90,49 +70,46 @@ const setStatus = (req, res, next) => {
 
 app.get("/", (req, res) => {
   res.json({
-    msg: "There is no data on this route, try /data or /author",
+    msg: "There is no data on this route, try /books or /author",
   });
 });
 
-app.get("/data", (req, res) => {
-  console.log('Students data fetched')
-  res.json(Data);
-  res.send(res.statusMessage);
+app.get("/books", (req, res) => {
+  console.log('books fetched')
+  res.json(books);
 });
 
-app.post('/data', (req, res) => {
-  //  console.log(req.body)
-    const newStudent = req.body
-    const currentLevel = Data.Levels.filter(item => item.id == newStudent.level)
-
-    Data.Students.push(newStudent)
-    currentLevel[0].Students.push({id: newStudent.id, name: newStudent.name, department: newStudent.department})
-
-    console.log(`Book ${newStudent.title} added to database`)
-    res.send(res.statusMessage)
-
-    return;
+app.get("/author", (req, res) => {
+  res.json(author);
 });
 
-// app.delete('/books/:id', (req, res) => {
-//   console.log(req.params)
-//   books = books.filter((bookItem) => bookItem.id !== req.params.id);
+app.delete('/books/:id', (req, res) => {
+  console.log(req.params)
+  books = books.filter((bookItem) => bookItem.id !== req.params.id);
 
-// //  res.end('book Deleted')
-//   res.send(res.statusMessage)
-// })
+//  res.end('book Deleted')
+  res.send(res.statusMessage)
+})
 
-// app.patch('/books/:id', (req, res) => {
-//   const bookItem = books.find((book) => book.id === req.params.id);
+app.patch('/books/:id', (req, res) => {
+  const bookItem = books.find((book) => book.id === req.params.id);
     
-//   bookItem.title = req.body.title;
-//   bookItem.summary = req.body.summary;
-//   bookItem.price = req.body.price;
+  bookItem.title = req.body.title;
+  bookItem.summary = req.body.summary;
+  bookItem.price = req.body.price;
 
-// //  res.end('book Updated')
-//   res.send(res.statusMessage)
-// })
+//  res.end('book Updated')
+  res.send(res.statusMessage)
+})
 
+app.post('/books', (req, res) => {
+//  console.log(req.body)
+  const newBook = req.body
+  books.push(newBook)
+
+  console.log(`Book ${newBook.title} added to database`)
+  res.send(res.statusMessage)
+});
 
 app.listen(process.env.PORT || 4000, () => {
   console.log(`listening on port ${process.env.PORT} 100`);
